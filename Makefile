@@ -14,7 +14,9 @@ seed:
 
 build:
 	pip install -r requirements.txt
+	cd dashboard && npm install && npm run build
 
 clean:
 	find . -type d -name __pycache__ -exec rm -rf {} +
 	find . -type f -name "*.pyc" -delete
+	rm -rf dashboard/dist dashboard/node_modules
