@@ -5,10 +5,10 @@ from dotenv import load_dotenv
 load_dotenv()
 
 DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://postgres:postgres@localhost:5432/zapier_triggers")
-REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379/0")
+REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6380/0")
 JWT_SECRET = os.getenv("JWT_SECRET", "dev-secret-change-in-production")
 API_HOST = os.getenv("API_HOST", "0.0.0.0")
-API_PORT = int(os.getenv("API_PORT", "8000"))
+API_PORT = int(os.getenv("API_PORT", "3004"))
 ACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24  # 24 hours
 ALGORITHM = "HS256"
 
